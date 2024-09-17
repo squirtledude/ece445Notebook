@@ -15,7 +15,7 @@ We propose to develop the Real-Time Golf Swing Tracker equipped with an integrat
 
 # Visual Aid
 
-![Visual Aid](./images/proposal.png)
+![Visual Aid](./images/proposalVisualAid.png)
 
 # High-Level Requirements:
 
@@ -54,7 +54,7 @@ This subsystem ensures that all electronic components within the golf club are a
 
 A comprehensive app that receives data from the golf club’s microcontroller. The user interface displays real-time analytics and historical trend analysis to help golfers understand and improve their swing techniques. High-level/process-intensive code will be run from the mobile application to perform any algorithms or potential ML to analyze golf swings. The application will most likely be exclusively hosted as an Android application for easier development.
 
-# Criterion For Success
+## Criterion For Success
 
 - **Precision**: The sensor data must be accurate to within a few degrees or percentage points, ensuring that feedback is reliable. 
 - **User Interface**: The mobile application must be intuitive and easy to use, providing clear and actionable insights without overwhelming the user. A section will be dedicated to user data & numerics so that users can quickly digest raw data. 
@@ -66,49 +66,58 @@ A comprehensive app that receives data from the golf club’s microcontroller. T
 
 The Power Subsystem is responsible for supplying consistent and reliable power to all electronic components within the Smart Golf Club, including the microcontroller and various sensors. It primarily consists of a rechargeable lithium-ion battery and a voltage regulator to ensure a steady output.
 
-Interfaces:
+**Interfaces**:
 Outputs a regulated 3.3V to the Microcontroller and Sensing Subsystem.
+
 Receives charging input via a USB-C port
 
-Requirements:
+**Requirements**:
 Must supply at least 500mA continuously at 3.3V ± 0.1V.
+
 Must integrate a charging circuit capable of fully charging the battery within 2 hours.
+
 The battery should last for at least 10 holes of golf on a single charge without performance degradation.
 
 ## Sensing Subsystem
 
 The Sensing Subsystem includes accelerometers, gyroscopes, and force sensors, each responsible for collecting specific data about the golf swing. The sensors will be placed along the grip to capture user data such as grip strength, swing speed, and club angle. Sensor placement may be extended by placements on the golf head to track the location the golf club hits the golf ball.
 
-Interfaces:
+**Interfaces**:
 Communicates with the Microcontroller via I2C or SPI
 
-Requirements:
-Sensors must maintain a tolerance of accuracy within 20% to ensure reliable data
-Must function effectively under the environmental conditions typically experienced on a golf course 
+**Requirements**:
+Sensors must maintain a tolerance of accuracy within 20% to ensure reliable data.
+
+Must function effectively under the environmental conditions typically experienced on a golf course.
+
 Accelerometers and gyroscope must update their readings at least 1000 times per second to capture dynamic swing data accurately.
 
 ## Microcontroller Subsystem
 
 The microcontroller serves as the central processing unit of the Smart Golf Club, handling input from the sensors via SPI, processing the data, and transmitting it to the Mobile Application via Wifi or Bluetooth. Placement of microcontroller will most likely be in the middle of the golf club to reduce distance wires have to travel (in the scenario we have sensors both on the grip and the club head)
 
-Interfaces:
+**Interfaces**:
 Receives sensor data via I2C/SPI.
+
 Transmits processed data to the Mobile Application via Bluetooth.
 
-Requirements:
+**Requirements**:
 Must have sufficient processing power to handle data from multiple sensors without lag, ensuring data processing latency of less than 500 milliseconds.
+
 Requires embedded Bluetooth capability with a range of at least 10 meters to maintain connection with the mobile application.
 
 ## Phone Subsystem
 
 The Mobile Application interfaces with the Smart Golf Club to display data in a user-friendly format and stores historical data for progress tracking. This subsystem may be extended by incorporating camera features to record golfers and track their form/technique with pre-compiled data. This may involve machine learning.
 
-Interfaces:
+**Interfaces**:
 Receives data from the Microcontroller via Bluetooth
 
-Requirements:
+**Requirements**:
 Must update and display data within 5 seconds of receiving it to ensure real-time feedback.
+
 Requires robust error handling to manage potential data transmission errors over Bluetooth.
+
 Should be compatible with major mobile operating systems (iOS and Android) to ensure wide accessibility.
 
 # Tolerance Analysis
