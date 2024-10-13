@@ -578,6 +578,10 @@
     [
       "141d16c9-273c-42a1-a517-8a02b30c3999",
       "Root"
+    ],
+    [
+      "64b7e679-ead4-41fc-b465-5003b40736f7",
+      "positional_sensor"
     ]
   ],
   "text_variables": {}
