@@ -6413,6 +6413,16 @@
 		)
 		(uuid "fe9f7786-b7e3-4527-8dc2-966e61414bf6")
 	)
+	(text "IMU"
+		(exclude_from_sim no)
+		(at 410.972 7.112 0)
+		(effects
+			(font
+				(size 5.08 5.08)
+			)
+		)
+		(uuid "24d6b1c9-4922-41cf-b120-c8cd88bc95a2")
+	)
 	(text "Programming"
 		(exclude_from_sim no)
 		(at 225.552 23.876 0)
