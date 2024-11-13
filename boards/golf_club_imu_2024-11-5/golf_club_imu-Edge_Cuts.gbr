@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,8.0.5*%
+%TF.CreationDate,2024-11-05T12:58:27-06:00*%
+%TF.ProjectId,golf_club_imu,676f6c66-5f63-46c7-9562-5f696d752e6b,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 8.0.5) date 2024-11-05 12:58:27*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.050000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X126746000Y-40640000D02*
+X162763200Y-40640000D01*
+X162763200Y-73660000D01*
+X126746000Y-73660000D01*
+X126746000Y-40640000D01*
+M02*

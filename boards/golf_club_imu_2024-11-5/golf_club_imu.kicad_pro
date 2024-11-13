@@ -58,9 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "starved_thermal|117952800|46238700|d44b121f-6ce0-4317-b818-230a6bc51dbe|1ce4712d-9e20-4b12-9059-03be1f4edbbf|F.Cu"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -450,7 +448,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "golf_club_draft.kicad_pro",
+    "filename": "golf_club_imu.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -582,6 +580,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
