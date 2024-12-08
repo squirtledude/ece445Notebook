@@ -28,7 +28,16 @@ For the IMU above, I chose to go with the ICM-20948 for the simple reason that o
 
 We also orignally wanted to use a Li-Ion battery due to its superior charge density and goes well in mobile electronics, but we were concerned that due to the flex of the golf club shaft and the consistent vibrations it would be too much of a physical challenge and danger to use Li-Ion. For this reason I decided to switch to a NiMH battery pack. Also, the 3.7V supplied from Li-Ion was too low for our linear regulator's dropout voltage of 1.4, using the equation Vdo = Vin - Vo. The 4.8 supplied from the NiMH exceeds the 1.4 dropout voltage when our Vo is 3.3V.
 
+# 2024-10-8 - Began Work on PCB Schematic
+
+This session was to prepare some work for the design review, worked on only the linear regulators, battery charger circuit, and programming circuit.
+
+![](firstschematic.png)
+![image](https://github.com/user-attachments/assets/25e383b7-8c59-40d8-b1ce-f4ccb681adf8)
+
 # 2024-10-13 - First Draft of PCB Schematic
+
+This session finalized the schematic for the first round of PCB orders we have planned. 
 
 # 2024-10-22 - First Draft of PCB Finalized
 
