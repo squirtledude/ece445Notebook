@@ -20,8 +20,10 @@ We propose to develop the Real-Time Golf Swing Tracker equipped with an integrat
 # High-Level Requirements:
 
 All sensors integrated into the Smart Golf Club, including accelerometers, gyroscopes, and force sensors, must maintain a tolerance of accuracy within 20%. This level of precision is essential to ensure that the data collected is consistently reliable and reflects true performance.
+
 The user interface of the Smart Golf Club's accompanying mobile application is designed to display data in real-time, ensuring that all information is updated and presented to the user within 5 seconds following each golf swing. This prompt update allows golfers to immediately see the impact of their swings on parameters such as swing speed, angle, and force, facilitating on-the-spot adjustments and learning.
-The total weight of the Smart Golf Club, after integrating all hardware systems including sensors, microcontroller, and power supply, should not exceed a 5% increase over the weight of a standard golf club. This stringent weight threshold is essential to ensure that the club retains a natural feel and balance, allowing golfers to swing with their usual technique without adaptation to added bulk. Maintaining this minimal weight increase is crucial for user acceptance and performance, ensuring that the technological enhancements enhance rather than hinder the golfing experience.
+
+The total weight of the Smart Golf Club, after integrating all hardware systems including sensors, microcontroller, and power supply, should not exceed a 5% increase over the weight of a standard golf club. This stringent weight threshold is essential to ensure that the club retains a natural feel and balance, allowing golfers to swing with their usual technique without adaptation to added bulk. Maintaining this minimal weight increase is crucial for user acceptance and performance, ensuring that the technological enhancements enhance rather than hinder the golfing experience. (dont need it right now)
 
 # 2. Block Diagram
 
