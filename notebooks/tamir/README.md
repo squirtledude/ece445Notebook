@@ -37,7 +37,7 @@ Additionally, I tested out a pretty non-standard application layer protocol, web
 I meticulously analyzed several research papers to identify metrics relevant to the project. I focused on wrist cock dynamics crucial for analyzing golf swings. These studies provided insights into the biomechanics of golf swings, which I used to develop and inspire equations based on Newtonian physics and kinematics.
 
 $$
-v = v_0 + \int a_y \, dt
+v = v_0 + \int a \, dt
 $$
 
 $$
@@ -53,6 +53,42 @@ $$
 
 This session primarily involved testing out the IMU PCB and seeing if the ESP-32 can detect if there is an IMU hooked up to our bread board. Unfortunately, it is currently unable to do so despite multiple attempts. Most likely, we needed to pull up the interrupt pin but instead left it hanging.
 
-![PCB For IMU](../../images/imupcb.png)
+![PCB For IMU](../../images/imupcb.jpg)
 
+# 2024-12-1 - Incorporating Features Into Mobile App
 
+There was plenty of preparation made for getting the software fully configured. I spent time optimizing ESP32 code to connect to University wifi since we had to disable ssl. Additionally, a multitude of complications occurred since we finally started testing with a real golf club and noticed many issues in terms of analyzing sensor data. I spent a very long time analyzing and trying to fix accelration readings within the mobile application, and ended up having to consider primarily the y axis to mitigate the affects of gravity.  
+
+Consequently, the equation for club head velocity boiled down to: 
+
+$$
+v = v_0 + \int a \, dt
+$$
+
+I discussed with my group members other metrics for analyzing a golf swing and came up with several other important methods which were:
+
+$$
+\text{squareImpact} = |\omega_z(t_\text{impact})| < \omega_\text{threshold}
+$$
+
+$$
+t_\text{impact} = \arg\max v_y(t)
+$$
+
+Overall, I just utilized intuition and newtonian physics to estimate critical times and metrics within a golf swing. 
+
+# 2024-12-2 - Optimizing Transmission And Process Rate
+
+I found a bug in the ESP-32 code that resulted in our sample rate being too slow. The bug revolved around reading too slowly. I increased the rate of reading and the mobile app began displaying the ideal Hz within the Phone's App UI.
+
+Additionally, I incorporated some key features for failure detection and determining when the ESP-32 server was down or properly working.
+
+![ESP-32 Server is Down](../../images/cantConnect.png)
+
+![ESP-32 Server is Up](../../images/workingApp.jpg)
+
+# 2024-12-3
+
+This was the day of our demo and mostly involved getting the golf club ready. Everything was connected to the breadboard to communicate with our ESP32 devboard and the IMU and force sensors were mounted onto the golf club. We also used an IMU breakout board due to the floating interrupt pin issue.
+
+![Final Design](../../images/unnamed.jpg)
